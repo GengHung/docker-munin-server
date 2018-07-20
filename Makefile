@@ -15,6 +15,7 @@ run:
         -e SMTP_MESSAGE='[${var:group};${var:host}] -> ${var:graph_title} -> warnings: ${loop<,>:wfields  ${var:label}=${var:value}} / criticals: ${loop<,>:cfields  ${var:label}=${var:value}}' \
         -e ALERT_RECIPIENT=monitoring@example.com \
         -e ALERT_SENDER=alerts@example.com \
+        -e NODES="server1:127.0.0.1" \
         munin:v1
 
         #-e NODES="server1:192.168.33.30 db:192.168.33.31" \
