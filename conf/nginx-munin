@@ -4,9 +4,9 @@ server {
   access_log /var/log/nginx/munin-access.log;
   error_log /var/log/nginx/munin-server.log;
 
-  location /munin {
-    root /var/cache/munin/www;
-  }
+#  location /munin {
+#    root /var/cache/munin/www;
+#  }
 
   location / {
     auth_basic "Munin Server";
